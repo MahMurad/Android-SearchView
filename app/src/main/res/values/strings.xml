@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">App.125(ListView)</string>
+    <string-array name="listItem">
+        <item>America</item>
+        <item>Bangladesh</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>Ethopia</item>
+        <item>Finland</item>
+        <item>Germany</item>
+        <item>HongKong</item>
+        <item>Iceland</item>
+        <item>Jamaica</item>
+        <item>Kenya</item>
+        <item>Libya</item>
+        <item>Mexico</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Paraguay</item>
+        <item>Russia</item>
+        <item>Somalia</item>
+        <item>Turkey</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+        <item>Wales</item>
+        <item>Xina</item>
+        <item>Yemen</item>
+        <item>Zimbabwe</item>
+    </string-array>
+</resources>
