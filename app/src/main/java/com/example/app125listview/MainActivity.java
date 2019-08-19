@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemLongClickListener(new OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this,position+1 +"."+ listArray[position] +" (X0X0)",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,position+1 +"."+ listArray[position] +,Toast.LENGTH_SHORT).show();
                 return false;
+                //commit test
             }
         });
     }
