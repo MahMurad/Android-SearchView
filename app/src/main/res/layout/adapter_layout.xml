@@ -3,53 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:weightSum="4"
-        android:layout_margin="10dp"
-        >
-        
-        <ImageView
-            android:id="@+id/imageViewId"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/america"
-            />
-
-        <LinearLayout
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
        <TextView
             android:id="@+id/textView1Id"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="center_horizontal"
             android:text="america"
             android:textSize="20sp"
             android:typeface="monospace"
+            android:layout_gravity="center_vertical"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
             android:padding="3dp"
         />
-            <TextView
-            android:id="@+id/textView2Id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Click here to see more details..."
-            android:textSize="12sp"
-            android:typeface="monospace"
-            android:padding="3dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-        />
-
-        </LinearLayout>
-    </LinearLayout>   
-
-
 </LinearLayout>

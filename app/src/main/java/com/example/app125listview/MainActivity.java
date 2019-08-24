@@ -23,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.ListViewId);
 
         countryNames = getResources().getStringArray(R.array.listItem);
-
-        //ArrayAdapter adapter = new ArrayAdapter(MainActivity.this,R.layout.adapter_layout,R.id.textView1Id,countryNames);
-        CustomAdapter adapter = new CustomAdapter(this,countryNames,countryFlags);
+        ArrayAdapter adapter = new ArrayAdapter(MainActivity.this,R.layout.adapter_layout,R.id.textView1Id,countryNames);
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
