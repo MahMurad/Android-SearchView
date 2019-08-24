@@ -11,6 +11,7 @@
         android:id="@+id/ListViewId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
         android:divider="#050505"
         android:dividerHeight="2dp"
         android:listSelector="#29F3CE"

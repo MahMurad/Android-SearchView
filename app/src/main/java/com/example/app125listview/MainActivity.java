@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
      private ListView listView;
+     private String[] countryNames;
+     private int[] countryFlags ={R.drawable.america,R.drawable.bangladesh,R.drawable.canada
+                  ,R.drawable.denmark,R.drawable.england,R.drawable.france,R.drawable.germany
+                  ,R.drawable.hongkong,R.drawable.iceland,R.drawable.japan,R.drawable.korea};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,18 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.ListViewId);
 
-        final String[] listArray = getResources().getStringArray(R.array.listItem);
+        countryNames = getResources().getStringArray(R.array.listItem);
 
+        //ArrayAdapter adapter = new ArrayAdapter(MainActivity.this,R.layout.adapter_layout,R.id.textView1Id,countryNames);
+        CustomAdapter adapter = new CustomAdapter(this,countryNames,countryFlags);
+        listView.setAdapter(adapter);
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, R.layout.adapter_layout, R.id.textViewId, listArray);
-        listView.setAdapter(arrayAdapter);
-
-        listView.setOnItemLongClickListener(new OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this,position+1 +"."+ listArray[position]  +" Volvo",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,position+1+"."+countryNames[position],Toast.LENGTH_SHORT).show();
                 return false;
-                //commit test
             }
         });
     }
