@@ -12,9 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
      private ListView listView;
      private String[] countryNames;
-     private int[] countryFlags ={R.drawable.america,R.drawable.bangladesh,R.drawable.canada
-                  ,R.drawable.denmark,R.drawable.england,R.drawable.france,R.drawable.germany
-                  ,R.drawable.hongkong,R.drawable.iceland,R.drawable.japan,R.drawable.korea};
+    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.ListViewId);
 
         countryNames = getResources().getStringArray(R.array.listItem);
-        ArrayAdapter adapter = new ArrayAdapter(MainActivity.this,R.layout.adapter_layout,R.id.textView1Id,countryNames);
+        adapter = new ArrayAdapter(MainActivity.this,R.layout.adapter_layout,R.id.textView1Id,countryNames);
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
