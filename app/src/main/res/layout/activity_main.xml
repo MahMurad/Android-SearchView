@@ -5,7 +5,15 @@
     android:layout_width="match_parent"
     android:background="#E3E7E6"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/searchViewId"
+        android:queryHint="Search here..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </SearchView>
 
     <ListView
         android:id="@+id/ListViewId"
@@ -19,5 +27,6 @@
         >
 
     </ListView>
+
 
 </LinearLayout>
